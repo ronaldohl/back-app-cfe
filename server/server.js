@@ -14,10 +14,16 @@ app.use(bodyParser.json());
 
 
 app.use(require('./routes/usuario'));
+app.use(require('./routes/cuentahabiente'));
+app.use(require('./routes/recibo'));
+
 
 
 app.get('/', (req, res) => {
-    // res.json('Hola Mundo')
+    res.json({
+        ok: true,
+        message: 'Server CFE'
+    })
 });
 
 
